@@ -1,4 +1,3 @@
-
 # NDKF: A Neural-Enhanced Distributed Kalman Filter for Nonlinear Multi-Sensor Estimation
 
 This repository contains the implementation of the Neural-Enhanced Distributed Kalman Filter (NDKF) as described in our paper:
@@ -12,9 +11,14 @@ NDKF is a data-driven framework for multi-sensor state estimation in nonlinear s
 The NDKF framework integrates neural network models within a distributed Kalman filtering scheme. Key features include:
 
 - **Learned Dynamics:** A neural network learns the residual dynamics of the system.
-- **Local Measurement Models:** Sensor nodes use neural networks to model their measurements.
-- **Consensus-Based Fusion:** Compact summary information is exchanged between nodes for distributed state fusion.
-- **Improved Performance:** Simulation results on a 2D system with four sensor nodes demonstrate that NDKF outperforms a distributed Extended Kalman Filter, especially under challenging nonlinear conditions.
+- **Local Measurement Models:** Each sensor node uses a neural network to model its own measurement function.
+- **Consensus-Based Fusion:** Local estimates are fused using an information-weighted consensus approach.
+- **Improved Performance:** Simulation results on a 2D system with four sensor nodes show that NDKF outperforms a distributed Extended Kalman Filter under challenging nonlinear conditions.
+
+## File Structure
+
+- **ndkf.py:** Contains the `NDKF` class, neural network definitions, and training routines.
+- **example_ndkf.py:** Provides an example that trains the networks, runs the NDKF simulation on a 2D system with 4 nodes, and produces plots for both the state trajectory and measurement innovation residuals.
 
 ## Installation
 
@@ -25,14 +29,17 @@ Ensure you have Python 3.6 or later installed. The required Python packages are:
 - [matplotlib](https://pypi.org/project/matplotlib/)
 
 You can install these dependencies using pip:
+
 ```bash
 pip install numpy torch matplotlib
 ```
 ## Usage
 
-To train the NDKF models and run the simulation, simply execute the main script:
+To train the NDKF models and run the simulation, execute the example script:
 
-python ndkf.py
+```bash
+python example_ndkf.py
+```
 
 This script will:
 
