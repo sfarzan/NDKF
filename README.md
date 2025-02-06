@@ -2,7 +2,7 @@
 
 This repository contains the implementation of the Neural-Enhanced Distributed Kalman Filter (NDKF) as described in our paper:
 
-**"NDKF: A Neural-Enhanced Distributed Kalman Filter for Nonlinear Multi-Sensor Estimation"**
+**[NDKF: A Neural-Enhanced Distributed Kalman Filter for Nonlinear Multi-Sensor Estimation](<https://arxiv.org/abs/2502.02687>)**
 
 NDKF is a data-driven framework for multi-sensor state estimation in nonlinear systems. By leveraging neural networks to learn both system dynamics and measurement functions from data, NDKF performs local prediction and update steps at each sensor node and fuses information via a consensus-based process. This approach reduces communication overhead and avoids a single point of failure, while improving scalability, robustness, and accuracy compared to traditional Kalman filters.
 
@@ -50,16 +50,16 @@ This script will:
 
 ## Citation
 
-If you use this code in your research, please cite our paper:
+If you use this code in your research, please cite our [paper](https://arxiv.org/abs/2502.02687):
 
 ```bibtex
 @misc{NDKF2025,
   title={{NDKF}: A Neural-Enhanced Distributed {Kalman} Filter for Nonlinear Multi-Sensor Estimation},
   author={Farzan, Siavash},
   year={2025},
-  eprint={},
+  eprint={2502.02687},
   archivePrefix={arXiv},
   primaryClass={eess.SY},
-  url={https://arxiv.org/abs/}, 
+  url={https://arxiv.org/abs/2502.02687},
 }
 ```
