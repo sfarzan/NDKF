@@ -55,7 +55,7 @@ If you use this code in your research, please cite our [paper](https://arxiv.org
 ```bibtex
 @misc{NDKF2025,
   title={{NDKF}: A Neural-Enhanced Distributed {Kalman} Filter for Nonlinear Multi-Sensor Estimation},
-  author={Farzan, Siavash},
+  author={Farzan, Siavash and Parisi, Bennett},
   year={2025},
   eprint={2502.02687},
   archivePrefix={arXiv},
